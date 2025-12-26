@@ -6,7 +6,7 @@ import { connectDB } from "./config/db";
 
 const app: Application = express();
 
-
+// Connect MongoDB
 connectDB();
 
 // Middleware
