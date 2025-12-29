@@ -5,7 +5,7 @@ import { User } from "../models/user.model";
 export const getUsers = async (req: Request, res: Response) => {
   try {
     const users = await User.find();
-
+    console.log(users);
     res.status(200).json({
       success: true,
       data: users,
