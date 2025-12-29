@@ -3,6 +3,7 @@ import cors from "cors";
 import userRoutes from "./routes/user.routes";
 import { env } from "./config/env";
 import { connectDB } from "./config/db";
+const PORT  = process.env.PORT
 
 const app: Application = express();
 
@@ -27,6 +28,6 @@ app.get("/health", (req, res) => {
 });
 
 // Start server
-app.listen(env.PORT, () => {
-  console.log(`Server running`);
+app.listen(PORT, () => {
+  console.log(`Server running ${PORT}`);
 });
