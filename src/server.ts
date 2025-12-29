@@ -22,7 +22,7 @@ app.use(express.json());
 // Routes
 app.use("/api/users", userRoutes);
 
-app.get("/", (req, res) => {
+app.get("/health", (req, res) => {
   res.send("🚀 Server is running");
 });
 
