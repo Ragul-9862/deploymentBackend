@@ -25,7 +25,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts || true
 
-      # 4. Deploy Backend
+      # 4. Deploy Backend test
       - name: Deploy Backend
         run: |
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no \
