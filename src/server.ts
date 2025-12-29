@@ -1,19 +1,19 @@
 import express, { Application } from "express";
 import cors from "cors";
-import userRoutes from "./routes/user.routes";
 
+import { env } from "./config/env";
 import { connectDB } from "./config/db";
-const PORT  = process.env.PORT
+import userRoutes from "./routes/user.routes";
 
 const app: Application = express();
 
-// Mongodb
+// MongoDB
 connectDB();
 
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: env.FRONTEND_URL,
     credentials: true,
   })
 );
@@ -23,11 +23,12 @@ app.use(express.json());
 // Routes
 app.use("/api/users", userRoutes);
 
-app.get("/health", (req, res) => {
-  res.send("🚀 Server is running");
+// Health check
+app.get("/health", (_req, res) => {
+  res.status(200).send("🚀 Server is running");
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server running ${PORT}`);
+app.listen(env.PORT, () => {
+  console.log(`🚀 Server running on port ${env.PORT}`);
 });
