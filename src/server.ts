@@ -1,7 +1,7 @@
 import express, { Application } from "express";
 import cors from "cors";
 import userRoutes from "./routes/user.routes";
-import { env } from "./config/env";
+
 import { connectDB } from "./config/db";
 const PORT  = process.env.PORT
 
