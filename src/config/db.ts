@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const MONGO_URI = "mongodb://localhost:27017/deployment";
+const MONGO_URI = "mongodb+srv://contactblearners_db_user:sHIS72WewfgYKiLZ@blended.7s09crg.mongodb.net/";
 // const MONGO_URI =
 //   "mongodb://admin:%40sachinabs@localhost:27018/admin";
 
