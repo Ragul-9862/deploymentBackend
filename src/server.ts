@@ -25,7 +25,6 @@ app.get("/health", (_req, res) => {
   res.status(200).send("🚀 Server is running");
 });
 
-// Start server
 app.listen(env.PORT, () => {
   console.log(`🚀 Server running on port ${env.PORT}`);
 });
