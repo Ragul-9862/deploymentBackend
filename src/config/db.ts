@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
-// const MONGO_URI = "mongodb://localhost:27017/deployment";
-const MONGO_URI =
-  "mongodb://admin:%40sachinabs@localhost:27018/admin";
+const MONGO_URI = "mongodb://localhost:27017/deployment";
+// const MONGO_URI =
+//   "mongodb://admin:%40sachinabs@localhost:27018/admin";
 
 
 export const connectDB = async () => {
